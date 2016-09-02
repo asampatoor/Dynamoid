@@ -21,7 +21,7 @@ module Dynamoid
         table_prefix = if Dynamoid::Config.namespace.nil? then
           ''
         else
-          "#{Dynamoid::Config.namespace}_"
+          "#{Dynamoid::Config.namespace}"
         end
 
         @table_name ||= "#{table_prefix}#{table_base_name}"
